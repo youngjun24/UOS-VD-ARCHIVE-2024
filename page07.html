@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>VD 1,2 과제전시회-배민영</title>
+        <!--타이틀 메인 페이지와 통일 필요할 경우 수정-->
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff" rel="stylesheet">
+    </head>
+
+  <style>
+    /* 인덱스 작동 css로 따로 빼둠*/
+
+/* 중앙 아이덴티티 */
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fixed-item {
+    position: fixed;
+    margin: 0px auto;
+    left: 40%;
+    transform: translateX(-20%);
+    top: 40%;
+    transform: translateY(-20%);
+    z-index: 1;
+}
+
+#personal-img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 텍스트 설정 */
+
+.title {
+    position: relative;
+    text-align: right;
+    font-family: "SpoqaHanSansNeo-Regular";
+    font-size: 26px;
+    line-height: 1.8em;
+    letter-spacing: -0.5px;
+}
+
+.describtion {
+    font-family: "SpoqaHanSansNeo-Regular";
+    font-weight: 400;
+    text-align: right;
+    line-height: 1.3em;
+    font-size: 14px;
+    letter-spacing: -0.7px;
+    word-spacing: 1.2px;
+}
+
+#align-center {
+    text-align: center;
+}
+
+#align-left {
+    text-align: left;
+}
+
+/* 왼쪽 레이아웃 정렬 */
+
+.left-wrap {
+    display: flex;
+    margin-top: calc(1vh + 5%);
+}
+
+/* 오른쪽 레이아웃 정렬 */
+
+.right-wrap {
+    display: flex;
+    margin-top: calc(1vh + 5%);
+}
+
+
+/* 이미지 추가할 경우 .layout(번호) #img(번호) {} 코드를 추가해서 위쪽, 왼쪽 마진값을 정해주며
+위치 조정하면 됩니다. 위치값을 줄 때는 %로 줘야 화면별로 균일하게 적용됩니다. */
+/* 사용하지 않는 이미지 태그는 모두 지워주세요(충돌 방지)*/
+/* shape poster 레이아웃 */
+
+.layout1 {
+    position: absolute;
+    left: calc(2vw + 10%);
+    width: 32%;
+}
+
+#img1 {
+    max-width:70%;
+    height: auto;
+}
+
+
+.layout1 #img1 {
+    float: right;
+    margin-top: 10px;
+}
+
+
+.clear{
+    clear:both;
+}
+
+/* Pattern Poster 레이아웃 */
+
+.layout2 {
+    position: absolute;
+    left: calc(2vw + 10%);
+    top: calc(2vh + 92%);
+    width: 32%;
+    height: max-content;
+}
+
+#img5 {
+    max-width:50%;
+    height: auto;
+}
+
+#img6 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img7 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img7_1 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img7_2 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+/*패턴포스터 5장인 사람을 위한 추가 태그(7_1, 7_2) 바로 아래 레이아웃 태그도 추가*/
+
+
+.layout2 #img5 {
+    float: right;
+    margin-top: 10px;
+}
+
+.layout2 #img6 {
+    float: right;
+    margin-top: 30%;
+}
+
+.layout2 #img7 {
+    float: left;
+    margin-top: 90%;
+    margin-left: calc(1vw + 30%);
+}
+
+.layout2 #img7_1 {
+    float: left;
+    margin-top: 120%;
+}
+
+.layout2 #img7_2 {
+    float: left;
+    margin-top: 140%;
+    margin-left: calc(1vw + 40%);
+}
+
+
+/* Minimal 레이아웃 */
+
+.layout-min {
+    position: absolute;
+    left: calc(2vw + 28%);
+    top: calc(1vh + 245%);
+    height: 40%;
+    width: max-content;
+}
+
+
+#img8 {
+    margin-top: 10px;
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+}
+
+
+/* Maximal Poster 레이아웃 */
+
+.layout-max {
+    position: absolute;
+    left: calc(2vw + 15%);
+    top: calc(1vh + 268%);
+    width: 32%;
+    height: max-content;
+}
+
+#img9 {
+    max-width: 50%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Identity Branding 레이아웃 */
+
+.layout7 {
+    position: absolute;
+    left: calc(2vw + 10%);
+    top: calc(2vh + 380%);
+    width: 32%;
+    height: max-content;
+}
+
+#img28 {
+    max-width:50%;
+    height: auto;
+}
+
+#img29 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img30 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img31 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img32 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+.layout7 #img28 {
+    float: right;
+    margin-top: 10px;
+}
+
+.layout7 #img29 {
+    float: right;
+    margin-top: 20%;
+    margin-left: 15%;
+}
+
+.layout7 #img30 {
+    float: left;
+    margin-top: 50%;
+    margin-left: 45%;
+}
+
+.layout7 #img31 {
+    float: left;
+    margin-top: 65%;
+    margin-left: 3%;
+}
+
+
+
+/* Generative System Design 레이아웃 */
+
+.layout3 {
+    position: absolute;
+    right: 5%;
+    width: 32%;
+    height: max-content;
+}
+
+#img10 {
+    max-width:70%;
+    height: auto;
+}
+
+#img11 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+#img12 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+#img13 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+.layout3 #img10 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout3 #img11 {
+    float: left;
+    margin-top: 30%;
+    margin-left: 20%;
+}
+
+.layout3 #img12 {
+    float: left;
+    margin-top: 60%;
+    margin-left: -90%;
+}
+
+.layout3 #img13 {
+    float: left;
+    margin-top: 80%;
+    margin-left: -30%;
+}
+
+
+/* Exhibition Design 레이아웃 */
+
+.layout4 {
+    position: absolute;
+    right: 5%;
+    top: calc(1vh + 175%);
+    width: 32%;
+    height: max-content;
+}
+
+
+#img15 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img16 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+.layout4 #img15 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout4 #img16 {
+    float:left;
+    margin-top: 50%;
+    margin-left: 30%;
+}
+
+
+/* Collectbook 레이아웃 */
+
+.layout5 {
+    position: absolute;
+    right: 5%;
+    top: calc(1vh + 265%);
+    width: 32%;
+    height: max-content;
+}
+
+#img19 {
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+#img20 {
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+.layout5 #img19 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout5 #img20 {
+    float: left;
+    margin-top: 30%;
+    margin-left: 35%;
+}
+
+/* Mapping 레이아웃 */
+
+.layout6 {
+    position: absolute;
+    right: 5%;
+    top: calc(1vh + 380%);
+    width: 32%;
+    height: max-content;
+}
+
+#img21 {
+    max-width: 90%;
+    height: auto;
+    position: absolute;
+}
+
+
+.layout6 #img21 {
+    float: left;
+    margin-top: 10px;
+}
+
+
+/* 갤러리 스타일 */
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .gallery-item {
+    width: max-content;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.5);
+    animation-timing-function: ease;
+    animation-duration: 0.3s;
+    z-index: 10;
+  }
+  
+
+  /* 모바일 */
+
+  @media (orientation: portrait) {
+  
+
+    /* 중앙 아이덴티티 */
+
+    .fixed-item {
+        position: fixed;
+        margin: 0px auto;
+        left: 30%;
+        transform: translateX(-10%);
+        top: 40%;
+        transform: translateY(-20%);
+        z-index: -1;
+    }
+
+    #personal-img {
+        width: 70%;
+        height: auto;
+    }
+
+
+    /* 텍스트 설정 */
+
+    .title {
+        position: relative;
+        text-align: right;
+        font-family: "SpoqaHanSansNeo-Regular";
+        font-size: 20px;
+        line-height: 1.8em;
+    }
+
+    .describtion {
+        font-family: "SpoqaHanSansNeo-Regular";
+        font-weight: 400;
+        text-align: right;
+        line-height: 1.5em;
+        font-size: 12px;
+    }
+
+    /* 왼쪽 레이아웃 정렬 */
+
+    .left-wrap {
+        display: flex;
+        margin-top: calc(1vh + 10%);
+    }
+
+    /* 오른쪽 레이아웃 정렬 */
+
+    .right-wrap {
+        display: flex;
+        margin-top: calc(1vh + 10%);
+    }
+
+
+    /* 이미지 추가할 경우 .layout(번호) #img(번호) {} 코드를 추가해서 위쪽, 왼쪽 마진값을 정해주며
+    위치 조정하면 됩니다. 위치값을 줄 때는 %로 줘야 화면별로 균일하게 적용됩니다. */
+    /* 사용하지 않는 이미지 태그는 모두 지워주세요(충돌 방지)*/
+    /* shape poster 레이아웃 */
+    .layout1 {
+        position: absolute;
+        left: 13%;
+        width: 34%;
+    }
+    
+    #img1 {
+        max-width:80%;
+        height: auto;
+    }
+    
+    
+    .layout1 #img1 {
+        float: right;
+        margin-top: 10px;
+    }
+    
+    
+    .clear{
+        clear:both;
+    }
+
+    
+/* Patter Poster 레이아웃 */
+
+.layout2 {
+    position: absolute;
+    left: 10%;
+    top: 65%;
+    width: 32%;
+    height: max-content;
+}
+
+#img5 {
+    max-width:70%;
+    height: auto;
+}
+
+#img6 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img7 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img7_1 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img7_2 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+.layout2 #img5 {
+    float: right;
+    margin-top: 10px;
+}
+
+.layout2 #img6 {
+    float: right;
+    margin-top: 60%;
+}
+
+.layout2 #img7 {
+    float: left;
+    margin-top: 120%;
+    margin-left: 60%;
+}
+
+.layout2 #img7_1 {
+    float: left;
+    margin-top: 180%;
+    margin-left: 15%;
+}
+
+.layout2 #img7_2 {
+    float: left;
+    margin-top: 250%;
+    margin-left: -5%;
+}
+
+/* Minimal 레이아웃 */
+
+.layout-min {
+    position: absolute;
+    left: 21%;
+    top: 165%;
+    height: 20%;
+    width: max-content;
+}
+
+
+#img8 {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+}
+
+
+/* Maximal Poster 레이아웃 */
+
+.layout-max {
+    position: absolute;
+    left: 7%;
+    top: 190%;
+    width: 31%;
+    height: max-content;
+}
+
+#img9 {
+    max-width: 120%;
+    height: auto;
+}
+
+/* Identity Branding 레이아웃 */
+
+.layout7 {
+    position: absolute;
+    left: 7%;
+    top: 260%;
+    width: 47%;
+    height: max-content;
+}
+
+#img28 {
+    max-width:70%;
+    height: auto;
+}
+
+#img29 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img30 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img31 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img32 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+.layout7 #img28 {
+    float: right;
+    margin-top: 10px;
+}
+
+.layout7 #img29 {
+    float: right;
+    margin-top: 50%;
+    margin-left: -10%;
+}
+
+.layout7 #img30 {
+    float: left;
+    margin-top: 90%;
+    margin-left: 45%;
+}
+
+.layout7 #img31 {
+    float: left;
+    margin-top: 110%;
+}
+
+.layout7 #img32 {
+    float: left;
+    margin-top: 150%;
+    margin-left: 70%;
+}
+
+/* Generative System Design 레이아웃 */
+
+.layout3 {
+    position: absolute;
+    right: 5%;
+    width: 33%;
+    height: max-content;
+}
+
+#img10 {
+    max-width:70%;
+    height: auto;
+}
+
+#img11 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img12 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img13 {
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+#img14 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+.layout3 #img10 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout3 #img11 {
+    float: left;
+    margin-top: 30%;
+    margin-left: 30%;
+}
+
+.layout3 #img12 {
+    float: left;
+    margin-top: 80%;
+    margin-left: -30%;
+}
+
+.layout3 #img13 {
+    float: left;
+    margin-top: 140%;
+    margin-left: -50%;
+}
+
+.layout3 #img14 {
+    float: left;
+    margin-top: 179%;
+    margin-left: -90%;
+}
+
+
+
+/* Collectbook 레이아웃 */
+
+.layout5 {
+    position: absolute;
+    right: 15%;
+    top: 180%;
+    width: 32%;
+    height: max-content;
+}
+
+#img19 {
+    max-width: 90%;
+    height: auto;
+    position: absolute;
+}
+
+#img20 {
+    max-width: 90%;
+    height: auto;
+    position: absolute;
+}
+
+.layout5 #img19 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout5 #img20 {
+    float: left;
+    margin-top: 60%;
+    margin-left: 35%;
+}
+
+/* Mapping 레이아웃 */
+
+.layout6 {
+    position: absolute;
+    right: 3%;
+    top: 250%;
+    width: 40%;
+    height: max-content;
+}
+
+#img21 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+
+.layout6 #img21 {
+    float: left;
+    margin-top: 10px;
+}
+
+}
+
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+  </style>
+
+    <body>
+        <!--인덱스-->
+        <div class="index">
+            <a href="#" class="logo.png"></a>
+                <img src="logo.png" class="mainlogo">
+                <ul class="name-list">
+                    <div id="list">
+                        <li><a href="page01.html">김민서</a></li>
+                        <li><a href="page02.html">김승주</a></li>
+                        <li><a href="page03.html">동유빈</a></li>
+                        <li><a href="page04.html">류시완</a></li>
+                        <li><a href="page05.html">박수빈</a></li>
+                        <li><a href="page06.html">박현지</a></li>
+                        <li><a href="page07.html">배민영</a></li>
+                        <li><a href="page08.html">송나연</a></li>
+                        <li><a href="page09.html">양새봄</a></li>
+                        <li><a href="page10.html">오현유</a></li>
+                        <li><a href="page11.html">이다빈</a></li>
+                    </div>
+                   <div id="list">
+                        <li><a href="page12.html">장지인</a></li>
+                        <li><a href="page13.html">정세아</a></li>
+                        <li><a href="page14.html">정은빈</a></li>
+                        <li><a href="page15.html">조경서</a></li>
+                        <li><a href="page16.html">지선율</a></li>
+                        <li><a href="page17.html">차승민</a></li>
+                        <li><a href="page18.html">차정연</a></li>
+                        <li><a href="page19.html">최문선</a></li>
+                        <li><a href="page20.html">최영준</a></li>
+                        <li><a href="page21.html">최이안</a></li>
+                        <li><a href="page22.html">paz</a></li>
+                    </div>                    
+                </ul>
+        </div>
+                
+        <!--중앙 아이덴티티&이름-->
+        <div class="fixed-item">
+                <img src="Identity/배민영.png" id="personal-img">
+        </div>
+
+<div class="gallery">
+    <div class="left-wrap">
+        <!-- 이미지 -->
+            <!--Section1-->
+            <div class="layout1" id="section1">
+                <div class="title">Shape poster</div>
+                <div class="describtion">만물의 시작, 그리고 이 세상을 구성하든 모든 근간은 원형에서 시작된다.
+                    <br>원의 기원과 그 형태의 발전 및 존재를 연대기 형식의 원 방사형 포스터로 정리했다.
+                </div>
+                <img src="./student07/shape01.jpg" class="gallery-item" id="img1" onclick>
+                <div class="clear"></div>
+             </div> 
+
+            <!--Section2-->
+            <div class="layout2" id="Section2">
+                <div class="title">Pattern poster</div>
+                <div class="describtion">나를 새롭게 보았다. 내가 인지하고 지내지 못하는 것들을 들추어내 보고 싶었다.
+                    <br>난 어떤 사람일까? 나의 모습은 다양한 스펙트럼 속에서 완벽을 향해 모험하지만,
+                    <br>그 이면에는 엉성함과 부족함 그리고 단차가 존재하는 듯 했다.
+                    <br>그리고 난 그 단차와 어색함이 어색하지 않다. </div>   
+                <img src="./student07/pattern01.jpg" class="gallery-item" id="img6" onclick> 
+                <img src="./student07/pattern02.png" class="gallery-item" id="img5" onclick>
+                <img src="./student07/pattern03.jpg" class="gallery-item" id="img7" onclick>
+                <img src="./student07/pattern04.jpg" class="gallery-item" id="img7_1" onclick>
+                <img src="./student07/pattern05.png" class="gallery-item" id="img7_2" onclick>
+                <div class="clear"></div>
+            </div>
+
+            <!--Minimal Poster-->
+            <div class="layout-min" id="Minimal-poster">
+                <div class="title" id="align-left">Minimal poster</div>
+                <div class="describtion" id="align-left">음식을 음미하듯, 시각, 후각, 촉각등을 통해 관객과의 소통을 하는 포스터로 제작되었다.</div>
+                <img src="./student07/minimal01.jpg" class="gallery-item" id="img8" onclick>
+                <div class="clear"></div>
+            </div> 
+            
+            <!--Maximal Poster-->
+            <div class="layout-max" id="Maximal-poster">
+                <div class="title" id="align-left">Maximal poster</div>
+                <div class="describtion" id="align-left">불필요한 이야기까지 담아내는 것, 이것을 맥시멀 포스터로 정의하였다.
+                    <br>이 포스터는 대파를 까듯, 한장한장 넘기며 대파의 TMI를 옅볼 수 있다.
+                    <br>관객이 직접 파를 넘기면서, 대파의 숨은 이야기를 발견하는 방식으로 TMI가 방출된다. </div>
+                <img src="./student07/maximal01.jpg" class="gallery-item" id="img9" onclick>
+                <div class="clear"></div>
+            </div>    
+
+            <!-- Identity Branding -->
+             <div class="layout7" id="Section7">
+                <div class="title">Identity Branding</div>
+                <div class="describtion">모두들 계획대로 살아가고 있는가?
+                    <br>계획대로 사는 것이 쉽지만은 않지만 누구나 계획은 갖고 살아간다.
+                    <br>특히 바쁜 요즘날 그 계획에는 내가 아닌 일정만 존재한다.
+                    <br>온전히 나를 느낄 수 있는 여백을 계획에 포함하고 싶다.
+                    <br>이 플래너는 다이어리와 같이 충분한 여백을 활용한다.
+                    <br>그 여백에는 스케줄을 제외한 모든것을 자유로이 포함할 수 있다. </div>
+                <img src="./student07/self01.jpg" class="gallery-item" id="img29" onclick>
+                <img src="./student07/self02.jpg" class="gallery-item" id="img30" onclick>
+                <img src="./student07/self03.jpg" class="gallery-item" id="img28" onclick>
+                <img src="./student07/self04.jpg" class="gallery-item" id="img31" onclick>
+                <div class="clear"></div>
+             </div>
+    </div>
+
+    </div>
+
+    <div class="right-wrap">
+            <!--Section3-->
+            <div class="layout3" id="Section3">
+                    <div class="title" id="align-left">Generative system</div>
+                    <div class="describtion" id="align-left">대파의 단면은 마치, 지문처럼 일정하듯 모두 다르다.
+                        <br>이 방사형 원형이 만들어지는 방식에 변수를 개입시켜,
+                        <br>랜덤한 형태의 원형 오브제가 탄생한 브랜드이다.
+                        <br>주사위를 통해 랜덤한 원형이 탄생하고, 그 원형의 높이까지 정해진다.
+                        <br>이 것을 바탕으로 3D프린트를하여, 필통, 장신구통 등등 여러 오브제가 탄생한다. 
+                        </div>
+                        <img src="./student07/generative01.jpg" class="gallery-item" id="img11" onclick>
+                        <img src="./student07/generative02.jpeg" class="gallery-item" id="img10" onclick>
+                        <img src="./student07/generative03.jpg" class="gallery-item" id="img12" onclick>
+                        <img src="./student07/generative04.jpeg" class="gallery-item" id="img13" onclick>
+                        <div class="clear"></div>
+                </div>    
+            </div>
+
+            <!--Section5-->
+            <div class="layout5" id="Section5">
+                    <div class="title" id="align-left">Collect book-WARNING</div>
+                    <div class="describtion" id="align-left">대부분의 전자기기에 함께 동봉되는 주의사항 안내서,
+                        <br>가장 먼저 보아야 할 것이지만, 대부분은 주의사항 안내서를 읽지 않는다.
+                        <br>주의사항 제작자 또한 별 기대없이 아주 작은 글씨로 형식적 내용을 담기 바쁘다.
+                        <br>읽기 힘들게 써둔 글씨 크기, 자간, 복잡한 내용들까지..
+                        <br>사용자의 문제일까 제작자의 문제일까?</div>
+                    <img src="./student07/collect01.png" class="gallery-item" id="img19" onclick>
+                    <img src="./student07/collect02.jpg" class="gallery-item" id="img20" onclick>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <!--Section6-->
+            <div class="layout6" id="Section6">
+                    <div class="title" id="align-left">Mapping your time</div>
+                    <div class="describtion" id="align-left">매일을 살아가며, 주어진 스케줄이 있고, 그 날의 기분도 있다.
+                        <br>바쁜 날에는 스트레스를 받다가도, 쉬는날에는 여유를 즐기기도한다.
+                        <br>이 지도는 나의 스케줄, 그리고 기분이 변화하는 흐름을 담은 지도이다. </div>
+                    <img src="./student07/mapping01.jpg" class="gallery-item" id="img21" onclick>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+</div>
+
+    </body>
+</html>
