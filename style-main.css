@@ -53,7 +53,7 @@ a {
 .name-list {
     display: none;
     position: absolute;
-    top: calc(13vh + 52%);
+    top: calc(13vh + 40%);
     left: calc(1vw + 10%);
     right: 0;
     text-align: left;
@@ -116,7 +116,7 @@ a {
     .name-list {
         display: none;
         position: absolute;
-        top: calc(10vh + 13%);
+        top: calc(10vh + 10%);
         left: calc(1vw + 1%);
         right: 0;
         text-align: left;
